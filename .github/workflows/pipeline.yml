@@ -9,4 +9,5 @@ jobs:
   script:
     - name: Run a script
       run: |
-        sh pipeline.sh
+        pwd
+        echo "Hello"
