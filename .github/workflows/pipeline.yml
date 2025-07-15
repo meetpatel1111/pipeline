@@ -10,5 +10,6 @@ jobs:
       - name: Run a script
         run: |
           pwd
+          cd ..
           ls
           echo "Hello"
