@@ -1,0 +1,12 @@
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+runs-on: ubuntu-latest
+
+jobs:
+  script:
+    - name: Run a script
+      run: |
+        sh pipeline.sh
