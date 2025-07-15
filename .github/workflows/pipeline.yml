@@ -10,4 +10,5 @@ jobs:
       - name: Run a script
         run: |
           pwd
+          ls
           echo "Hello"
