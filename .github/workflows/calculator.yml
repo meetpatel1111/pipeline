@@ -1,0 +1,20 @@
+name: Calculator App CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check Frontend Files Exist
+        run: |
+          test -f calculator-app/index.html
+          test -f calculator-app/style.css
+          test -f calculator-app/app.js
