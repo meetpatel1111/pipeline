@@ -1,0 +1,10 @@
+{
+  "name": "prime-checker-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "echo 'Open public/index.html manually'"
+  },
+  "license": "MIT"
+}
