@@ -2,8 +2,6 @@ name: Build and Run Static Apps
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 jobs:
   run-static-apps:
@@ -24,12 +22,12 @@ jobs:
       - name: Build Prime Checker
         run: |
           mkdir -p build/prime-checker
-          cp -r prime-checker/public/* build/prime-checker/
+          cp -r prime-checker/* build/prime-checker/
 
       - name: Build Calculator
         run: |
           mkdir -p build/calculator
-          cp -r calculator-app/public/* build/calculator/
+          cp -r calculator-app/* build/calculator/
 
       - name: Start Prime Checker (Port 8080)
         run: |
