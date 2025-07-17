@@ -44,7 +44,15 @@ jobs:
       - name: Lint with flake8
         run: |
           pip install flake8
-          flake8 .
 
+      - name: Save flake8 report
+        run: |
+          flake8 . --count --verbose --statistics > flake8-report.txt || true
+
+      - name: Upload flake8 report
+        uses: actions/upload-artifact@v4
+        with:
+          name: flake8-report
+          path: flake8-report.txt
 
 
